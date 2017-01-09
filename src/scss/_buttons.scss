@@ -1,0 +1,23 @@
+.btn-outline {
+  color: rgba($main-white-color, 1);
+  border-color: rgba($main-white-color, 1);
+  border: 1px solid;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active,
+.btn-outline.active {
+  color: white;
+  background: $accent-color;
+  border-color: $accent-color;
+}
+.btn {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 50px;
+}
+.btn-xl {
+  padding: 15px 45px;
+  font-size: 11px;
+}

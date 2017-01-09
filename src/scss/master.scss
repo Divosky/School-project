@@ -1,0 +1,352 @@
+@import "variables";
+@import "keyframes";
+@import "buttons";
+
+html, body {
+  background: $main-bg;
+  color: $main-black-color;
+  font-family: arial;
+  font-size: 14px;
+  margin: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+// Navigation
+.navbar-default {
+  background-color: white;
+  border-color: rgba(34, 34, 34, 0.05);
+  transition: all .35s;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+.navbar-brand img { display: inline-block; margin-right: 5px; max-width: 32px; }
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+  color: $accent-color;
+}
+.navbar-default .navbar-header .navbar-toggle {
+  font-size: 12px;
+  color: #222222;
+  padding: 8px 10px;
+}
+.navbar-default .nav > li > a {
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+  color: #222222;
+  outline: 0;
+}
+
+.navbar-default .navbar-brand {
+  color: #222222;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover,
+.navbar-default .nav > li.active > a,
+.navbar-default .nav > li.active > a:focus {
+  color: $accent-color !important;
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .navbar-default .navbar-header .navbar-brand {
+    color: $main-white-color;
+  }
+  .navbar-default .navbar-header .navbar-brand:hover,
+  .navbar-default .navbar-header .navbar-brand:focus {
+    color: rgba($main-white-color, 1);
+  }
+  .navbar-default .nav > li > a,
+  .navbar-default .nav > li > a:focus {
+    color: $main-white-color;
+  }
+  .navbar-default .nav > li > a:hover,
+  .navbar-default .nav > li > a:focus:hover {
+    color: rgba($main-white-color, 1);
+  }
+  .navbar-default.affix {
+    background-color: rgba($main-white-color, 1);
+    border-color: rgba(34, 34, 34, 0.1);
+  }
+  .navbar-brand img {
+    animation: 5s logo infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    max-width: 64px;
+    transition: all .35s;
+  }
+  .navbar-default.affix .navbar-brand img {
+    max-width: 32px;
+    animation: none;
+  }
+  .navbar-default.affix .navbar-header .navbar-brand {
+    color: #222222;
+  }
+  .navbar-default.affix .navbar-header .navbar-brand:hover,
+  .navbar-default.affix .navbar-header .navbar-brand:focus {
+    color: $accent-color;
+  }
+  .navbar-default.affix .nav > li > a,
+  .navbar-default.affix .nav > li > a:focus {
+    color: #222222;
+  }
+  .navbar-default.affix .nav > li > a:hover,
+  .navbar-default.affix .nav > li > a:focus:hover {
+    color: $accent-color;
+  }
+} // >
+
+// Header
+header {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  overflow-y: hidden;
+  background: url("https://i.ytimg.com/vi/BhqXmSJyyTs/maxresdefault.jpg"), #7b4397;
+  background-size: 100% 100%;
+  color: rgba($main-white-color, 1);
+}
+.header-content {
+  text-align: center;
+  padding: 150px 0 50px;
+  position: relative;
+}
+.header-content-inner {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.header-content-inner h1 {
+  color: $main-white-color;
+  text-shadow: 1px 1px #000;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  header {
+    min-height: 100%;
+  }
+  header .header-content {
+    text-align: left;
+    padding: 0;
+    height: 100vh;
+  }
+  header .header-content .header-content-inner {
+    max-width: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  header .header-content .header-content-inner h1 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 992px) {
+  header .header-content .header-content-inner h1 {
+    font-size: 50px;
+  }
+}
+// >
+
+// News
+.news {
+  background: $accent-color-2nd;
+  color: $main-white-color;
+}
+
+.news--content {
+  text-align: justify;
+}
+
+.news--content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.news--content p {
+  width: 75%;
+  margin: 15px auto;
+}
+
+.news .panel-default .panel-heading {
+  color: $main-white-color;
+}
+
+.news .panel a:hover,
+.news .panel a:focus,
+.news .panel a:active {
+  color: rgba($main-white-color, 1);
+}
+
+.news .panel-heading [data-toggle="collapse"]:after {
+  color: $main-white-color;
+}
+// >
+
+// Sign on
+.sign-on {
+  background: #ecf0f1;
+}
+
+.sign-on .panel-title {
+  font-weight: 700;
+}
+
+// >
+
+// Contact
+.contact {
+  background: $accent-color-2nd;
+  color: $main-white-color;
+}
+
+.contact__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact__box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__box:not(:last-child) {
+  border-right: 1px solid transparent;
+  border-image: linear-gradient(to top, transparent , $main-white-color, transparent);
+  border-image-slice: 1;
+}
+// >
+
+// Footer
+footer {
+  background-color: #222222;
+  padding: 25px 0;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+}
+footer p {
+  font-size: 12px;
+  margin: 0;
+}
+footer ul {
+  margin-bottom: 0;
+}
+footer ul li a {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+}
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active,
+footer ul li a.active {
+  text-decoration: none;
+}
+// >
+
+// Panels
+.panel-group .panel {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.panel:not(:first-child) {
+  border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+.panel-default .panel-heading {
+  background: transparent;
+  border: 0;
+}
+
+.panel-heading [data-toggle="collapse"]:after {
+  font-family: "Glyphicons Halflings";
+  content: "\e259";
+  float: right;
+  color: $main-black-color;
+  font-size: 18px;
+  line-height: 22px;
+
+}
+
+.panel-heading [aria-expanded="true"]:after {
+  transform: rotate(-180deg);
+  color: #F58723;
+}
+
+.panel a:hover,
+.panel a:focus,
+.panel a:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+.panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group { border: 0; } //shitty bootsrap styling, meh.
+// >
+
+// Global classes
+a {
+  cursor: pointer; // fix for chrome for linux
+}
+
+.page-title {
+  text-align: center;
+  overflow: hidden;
+}
+
+.page-title:before,
+.page-title:after {
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+.page-title:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+.page-title:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+// >
+
+.back-to-top {
+  display:none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $main-black-color;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: lighten($accent-color-2nd, 10%);
+}
